@@ -9,7 +9,7 @@ workflows:
         script: |
           rm -rf source
           mkdir source
-          unzip -q watch-apk-test-notification-arm64.zip -d source
+          unzip -q watch-apk-test-resource-ids-arm64.zip -d source
           cd source
           chmod +x gradlew
           ./gradlew assembleDebug
