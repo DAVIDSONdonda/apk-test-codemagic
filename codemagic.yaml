@@ -5,13 +5,13 @@ workflows:
     environment:
       java: 17
     scripts:
-      - name: Extraire et compiler le projet Android
+      - name: Extraire et compiler le projet Android v2
         script: |
           rm -rf source
           mkdir source
-          unzip -q watch-apk-test.zip -d source
-          cd source/watch-apk-test
+          unzip -q watch-apk-test-menus-v2.zip -d source
+          cd source
           chmod +x gradlew
           ./gradlew assembleDebug
     artifacts:
-      - source/watch-apk-test/app/build/outputs/apk/debug/app-debug.apk
+      - source/app/build/outputs/apk/debug/app-debug.apk
