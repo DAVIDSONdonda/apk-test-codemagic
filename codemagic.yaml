@@ -1,15 +1,15 @@
 workflows:
   android-tools-debug:
-    name: TikTok Tools Android - APK debug (TDLib)
+    name: TikTok Tools Android - APK debug (automatisation package)
     max_build_duration: 60
     environment:
       java: 17
     scripts:
-      - name: Extraire et compiler le projet Android TDLib arm64
+      - name: Extraire et compiler le projet Android avec ouverture ciblée
         script: |
           rm -rf source
           mkdir source
-          unzip -q watch-apk-test-tdlib-arm64.zip -d source
+          unzip -q watch-apk-test-auto-package-arm64.zip -d source
           cd source
           chmod +x gradlew
           ./gradlew assembleDebug
