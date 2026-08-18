@@ -1,15 +1,15 @@
 workflows:
   android-tools-debug:
-    name: TikTok Tools Android - APK diagnostic Resource IDs
+    name: Macro Studio Android - APK debug
     max_build_duration: 60
     environment:
       java: 17
     scripts:
-      - name: Extraire et compiler le projet Android avec panneau flottant
+      - name: Extraire et compiler Macro Studio Android
         script: |
           rm -rf source
           mkdir source
-          unzip -q watch-apk-test-diagnostic-arm64.zip -d source
+          unzip -q watch-apk-test-macro-studio-arm64.zip -d source
           cd source
           chmod +x gradlew
           ./gradlew assembleDebug
