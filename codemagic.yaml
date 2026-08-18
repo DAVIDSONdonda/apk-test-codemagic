@@ -10,8 +10,8 @@ workflows:
           rm -rf source
           mkdir source
           unzip -q watch-apk-test-macro-studio-arm64.zip -d source
-          cd source
+          cd source/watch-apk-test
           chmod +x gradlew
           ./gradlew assembleDebug
     artifacts:
-      - source/app/build/outputs/apk/debug/app-debug.apk
+      - source/watch-apk-test/app/build/outputs/apk/debug/app-debug.apk
